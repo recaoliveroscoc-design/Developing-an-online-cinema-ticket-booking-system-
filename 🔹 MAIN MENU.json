@@ -1,0 +1,161 @@
+🔹 MAIN MENU
+
+1. What happens if the user enters a wrong option in the main menu?
+
+✔️ The system shows “Invalid choice!” and stays in the main menu.
+
+2. Why is while True used in the main menu?
+
+✔️ To keep the menu running until the user logs out.
+
+3. What happens when option 3 (Log Out) is chosen?
+
+✔️ It prints the logout message and breaks the loop, ending the program.
+
+4. How does the program return to the main menu after booking?
+
+✔️ If the user answers “no” to booking again, the loop ends and returns to main menu.
+
+🔹 ADMIN PANEL
+
+5. What are the correct admin username and password?
+
+✔️ Username = admin, Password = 1234.
+
+6. Why do we check (user == "admin" and pw == "1234")?
+
+✔️ To secure the admin panel and prevent unauthorized access.
+
+7. What does the admin panel display?
+
+✔️ It shows how many seats are booked per day out of 15 seats.
+
+8. What if the admin enters the wrong password?
+
+✔️ It prints “Invalid login!” and exits the admin panel.
+
+🔹 MOVIE DISPLAY & DAY VALIDATION
+
+9. What happens if the user enters an invalid day?
+
+✔️ It prints “Invalid day!” and asks again.
+
+10. How does the system know which movies to display?
+
+✔️ It uses the dictionary key: movies[day].
+
+11. What causes an IndexError during movie selection?
+
+✔️ Typing a movie number that doesn’t exist.
+
+12. Why is enumerate(movies[day], 1) used?
+
+✔️ To number the movies starting from 1.
+
+🔹 PRICE COMPUTATION
+
+13. Explain the logic inside calc_price().
+
+✔️ Children: 100, Adults: 250, Seniors: 120
+✔️ Wednesday discount: -30
+✔️ PWD discount: -50
+
+14. What is the price for child, adult, and senior?
+
+✔️ Child = ₱100, Adult = ₱250, Senior = ₱120.
+
+15. Why is Wednesday discounted by 30 pesos?
+
+✔️ Because it represents a Wednesday promo.
+
+16. What happens if user enters a non-number age?
+
+✔️ It triggers the exception and prints “Invalid age!”
+
+🔹 PWD DISCOUNT
+
+17. How does the system detect if the user is a PWD?
+
+✔️ It checks if the user typed “yes” after converting input to lowercase.
+
+18. How much is the PWD discount?
+
+✔️ ₱50.
+
+19. What if the user types “YES” in uppercase?
+
+✔️ It still works because the input is converted to lowercase.
+
+🔹 SEAT SELECTION
+
+20. What happens if the user picks a seat already taken?
+
+✔️ It prints “Seat not available!”
+
+21. How does the program determine available seats?
+
+✔️ It lists seats not yet inside seats[day].
+
+22. What happens when all seats are booked?
+
+✔️ It prints that the day is FULL.
+
+23. Why convert the seat input to uppercase?
+
+✔️ Because all seat codes are in uppercase (A1, A2, etc.).
+
+🔹 LOGIN SYSTEM
+
+24. Why check if not name or not pw?
+
+✔️ To block empty username or password.
+
+25. What happens if the user leaves fields blank?
+
+✔️ It prints “Login failed!”
+
+🔹 ERROR HANDLING
+
+26. Why use try–except in movie selection and age input?
+
+✔️ To prevent errors when user inputs letters or invalid numbers.
+
+27. What errors are we preventing in movie selection?
+
+✔️ ValueError and IndexError.
+
+28. What happens if the user types a letter instead of a number?
+
+✔️ The except block runs and shows “Invalid choice!”
+
+🔹 DATA STRUCTURES
+
+29. Why is seats a dictionary?
+
+✔️ So each day stores its own list of booked seats.
+
+30. How is seat_list generated?
+
+✔️ Using list comprehension for A1–A5, B1–B5, C1–C5.
+
+31. Why not store booked seats in one list only?
+
+✔️ Because each day has different seat bookings.
+
+🔹 EXTRA QUESTIONS
+
+32. How is the receipt generated?
+
+✔️ Using a formatted multi-line string showing all booking details.
+
+33. Why does the program stop booking when the user types “no”?
+
+✔️ Because the loop breaks.
+
+34. How do you reset all bookings?
+
+✔️ Reinitialize seats = {d: [] for d in days}.
+
+35. How do you add another movie to the system?
+
+✔️ Edit the movies dictionary to include new entries.🔹 MAIN MENU
